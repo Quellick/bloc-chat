@@ -7,11 +7,6 @@
             })
             console.log('modal opened')
         }
-        //
-        this.submit = function () {
-          Room.$add(this.newRoom);
-          $uibModalInstance.close();
-        }
     }
     angular
         .module('blocChat')
