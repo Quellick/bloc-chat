@@ -7,7 +7,7 @@
              <input type="text" name="input" ng-bind="newRoom">
      </div>
      <div class="modal-footer">
-         <button class="btn-cancel" type="button" ng-click="$uibModalInstance.dismiss">Cancel</button>
-         <button class="btn-new" type="button" ng-click="Room.$add(newRoom)">Create Room</button>
+         <button class="btn-cancel" type="button" ng-click="$uibModalInstance.cancel">Cancel</button>
+         <button class="btn-new" type="button" ng-click="$uibModalInstance.room.add(this.submit)">Create Room</button>
      </div>
 </section>
