@@ -1,7 +1,19 @@
 <section class="navbar")
   <!-- the ngRepeat directive -->
-  <div ng-repeat="room in home.rooms">
+  <!-- <div ng-repeat="room in home.rooms">
       <h3>{{ room.$id }}</h3>
       <p>{{ room.$value }}</p>
   </div>
+  <div ng-controller='ModalCtrl as modals'>
+      <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+  </div> -->
+  <div class="room-nav">
+     <h1>Bloc Chat</h1>
+     <div ng-controller='ModalCtrl as modals'>
+         <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+     </div>
+     <div ng-repeat="room in home.rooms">
+         <h3>{{ room.$id }}</h3>
+     </div>
+ </div>
 </section>

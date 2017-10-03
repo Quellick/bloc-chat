@@ -6,6 +6,12 @@
 
     Room.all = rooms;
 
+    Room.add = function(rooms) {
+      rooms.$add(Room)
+      var newRoom = {
+        Room: "Name"
+      };
+    }
     return Room;
   }
 
