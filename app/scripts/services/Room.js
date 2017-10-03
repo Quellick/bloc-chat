@@ -7,7 +7,7 @@
     Room.all = rooms;
 
     Room.add = function(rooms) {
-      rooms.$add(Room)
+      rooms.$add(newRoom)
       var newRoom = {
         Room: "Name"
       };

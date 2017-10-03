@@ -4,10 +4,10 @@
      </div>
      <div class="modal-body">
          <h5 class="modal-prompt">Enter a room name</h5>
-             <input type="text" name="input" ng-model="modal.newRoom.name">
+             <input type="text" name="input" ng-bind="newRoom">
      </div>
      <div class="modal-footer">
-         <button class="btn-cancel" type="button" ng-click="modal.cancel()">Cancel</button>
-         <button class="btn-new" type="button" ng-click="modal.submit()">Create room</button>
+         <button class="btn-cancel" type="button" ng-click="$uibModalInstance.dismiss">Cancel</button>
+         <button class="btn-new" type="button" ng-click="Room.$add(newRoom)">Create Room</button>
      </div>
 </section>
