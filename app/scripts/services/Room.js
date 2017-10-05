@@ -6,7 +6,7 @@
 
     Room.all = rooms;
 
-    Room.add = function(rooms) {
+    Room.createNewRoom = function(newRoom) {
       rooms.$add(newRoom)
       var newRoom = {
         Room: "Name"

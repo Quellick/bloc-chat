@@ -4,12 +4,11 @@
           $uibModalInstance.dismiss('dismiss')
         }
         this.submit = function () {
-          Room.$add(this.newRoom);
           $uibModalInstance.close();
         }
     }
 
     angular
         .module('blocChat')
-        .controller('ModalInstanceCtrl', ['$uibModalInstance', ModalInstanceCtrl])
+        .controller('ModalInstanceCtrl', ['$uibModalInstance', 'Room',  ModalInstanceCtrl])
 })()
