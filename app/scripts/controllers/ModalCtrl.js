@@ -1,15 +1,15 @@
 (function() {
     function ModalCtrl($uibModal, Room) {
-        this.open = function() {
-            var modalInstance = $uibModal.open({
+        this.open = function() { //function that opens a new modal window.
+            var modalInstance = $uibModal.open({ //tells new modal what template to use and what controller is responsible for the new modal instance.
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalInstanceCtrl as modalInstance'
             })
-            console.log('modal opened')
+            console.log('modal opened') //logs that the modal is open in the console
 
             modalInstance.result.then(function(newRoom) { //looks for a result from the input field and runs the function with the result as the parameter
-                rooms.$add(newRoom) //creates a new Quote within the Quote object
-                console.log(newRoom) //logs all of the quotes to the console.
+                Room.createNewRoom(newRoom) //creates a new Room within the rooms object
+                console.log(newRoom) //logs the name of the new room to console
             })
         }
     }

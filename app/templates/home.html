@@ -12,9 +12,6 @@
      <div ng-controller='ModalCtrl as modals'>
          <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
      </div>
-     <div>
-       <button type="button" class="btn-open-chat" ng-click="">Open Room</button>
-     </div>
      <div id="chatRooms" ng-repeat="room in home.rooms">
          <h3>{{ room.$id }}</h3>
      </div>
