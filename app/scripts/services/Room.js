@@ -7,8 +7,6 @@
     Room.all = rooms; // populates the Room object with all of the entries from the rooms variable.
 
     Room.createNewRoom = function(newRoom) {
-      // var ref = firebase.database().ref().child("Rooms");
-      // var rooms = $firebaseArray(ref);
       rooms.$add(newRoom);
       console.log(newRoom);
     }

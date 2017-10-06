@@ -4,6 +4,7 @@
           $uibModalInstance.dismiss('canceled')
         }
         this.submit = function () { //remove the modal if user submits new room name.
+          this.newRoom
           $uibModalInstance.close();
         }
     }
