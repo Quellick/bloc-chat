@@ -1,22 +1,20 @@
-<section class="navbar")
-  <!-- the ngRepeat directive -->
-  <!-- <div ng-repeat="room in home.rooms">
-      <h3>{{ room.$id }}</h3>
-      <p>{{ room.$value }}</p>
-  </div>
-  <div ng-controller='ModalCtrl as modals'>
-      <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
-  </div> -->
-  <div class="room-nav">
+<section>
+  <div class="navbar">
      <h1>Bloc Chat</h1>
-     <div ng-controller='ModalCtrl as modals'>
+     <div id="button" ng-controller='ModalCtrl as modals'>
          <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
      </div>
-     <div id="chatRooms" ng-repeat="room in home.rooms">
-         <h3>{{ room.$id }}</h3>
+     <!-- the ngRepeat directive -->
+     <div>
+         <h3 ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)" class="roomName">{{ room.$value }}</h3>
      </div>
-     <div id="chatMessages" ng-repeat="room in home.rooms">
-         <h4>{{ room.$value }}<h4>
-     </div>
- </div>
+  </div>
+  <div class="chatcontent">
+    <h3 class="chatroomname" style="text-align:center;">Chat Room Here{{ messages.roomId }}</h3>
+    <div class="messages" ng-repeat="messages in rooms.messages">
+        <div class="username">name{{ messages.username }}</div>
+        <div class="timestamp">time{{ messages.sentAt }}</div>
+        <div class="user-message">message{{ messages.content }}</div>
+    </div>
+  </div>
 </section>

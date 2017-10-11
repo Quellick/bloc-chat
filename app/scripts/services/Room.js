@@ -10,6 +10,7 @@
       rooms.$add(newRoom);
       console.log(newRoom);
     }
+    
     return Room;
   }
 
