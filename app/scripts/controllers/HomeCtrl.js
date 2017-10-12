@@ -5,6 +5,7 @@
       this.setActiveRoom = function (room) {
         $scope.currentRoom = room;
         $scope.messages = Message.getByRoomId(room.$id);
+        console.log($scope.currentRoom);
         console.log($scope.messages);
     }
 }
