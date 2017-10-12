@@ -13,7 +13,6 @@
          <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
      </div>
      <div id="chatRooms" ng-repeat="room in home.rooms">
-         <h3>{{ room.$id }}</h3>
      </div>
      <div id="chatMessages" ng-repeat="room in home.rooms">
          <h4>{{ room.$value }}<h4>
