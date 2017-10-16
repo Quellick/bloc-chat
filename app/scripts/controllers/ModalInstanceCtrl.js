@@ -1,5 +1,5 @@
 (function() {
-    function ModalInstanceCtrl($uibModalInstance, Room) {
+    function ModalInstanceCtrl($uibModalInstance, $cookies, Room) {
         this.cancel = function() { //removes the modal if user clicks cancel.
           $uibModalInstance.dismiss('canceled')
         }
@@ -10,5 +10,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalInstanceCtrl', ['$uibModalInstance', "Room", ModalInstanceCtrl])
+        .controller('ModalInstanceCtrl', ['$uibModalInstance', 'Room', '$cookies', ModalInstanceCtrl])
 })()
