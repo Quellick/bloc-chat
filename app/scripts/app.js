@@ -1,4 +1,6 @@
 (function() {
+    //TODO: (mark out for submission) clears cookies each time the page is loaded
+    //document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
     function config($locationProvider, $stateProvider) {
         $locationProvider
             .html5Mode({
