@@ -16,5 +16,9 @@
         <div class="timestamp">Time Sent: {{ message.sentAt }}</div>
         <div class="user-message">Message: {{ message.content }}</div>
     </div>
+    <div class="message-field">
+        <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="newMessage" style="width:500px; color: black;">
+        <button class="btn-new-message" type="button" ng-click="home.sendMessage(newMessage)">Send message</button>
+    </div>
   </div>
 </section>

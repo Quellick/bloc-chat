@@ -5,15 +5,16 @@
     var messages = $firebaseArray(ref);
 
     //populates the Message object with all the available messages
-    Message.all = messages; 
+    Message.all = messages;
 
     Message.getByRoomId = function(roomId) {
        //console.log(messages);
        return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
     };
-
-    Message.send = function(newMessage) {
+    // parameter name is arbitrary is being passed the value from the function that calls it.
+    Message.send = function(messageObject) {
         // Send method logic
+        messages.$add(messageObject);
     };
 
     return Message;
