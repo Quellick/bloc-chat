@@ -13,7 +13,7 @@
     <h3 class="chatroomname" style="text-align:center;">Chat Room Here {{ currentRoom.$value }}</h3>
     <div class="messages-body" ng-repeat="message in messages">
         <div class="username">User: {{ message.username }}</div>
-        <div class="timestamp">Time Sent: {{ message.sentAt }}</div>
+        <div class="timestamp">Time Sent: {{ message.sentAt | date : "shortTime" }}</div>
         <div class="user-message">Message: {{ message.content }}</div>
     </div>
     <div class="message-field">
