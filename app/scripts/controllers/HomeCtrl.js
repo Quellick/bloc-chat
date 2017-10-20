@@ -23,6 +23,7 @@
         }
         //fire send function from message service with content of new message
         Message.send(newMessage);
+        $scope.newMessage = "";
       }
 }
     angular //
